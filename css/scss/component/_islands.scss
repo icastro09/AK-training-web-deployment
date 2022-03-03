@@ -1,0 +1,144 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.islands {
+  display: flex;
+  @include mobile {
+    width: 100%;
+    margin-left: 5%;
+    flex-wrap: nowrap;
+    justify-items: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+  }
+  @include tablet {
+    width: 85%;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-items: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: space-between;
+  }
+  @include desktop {
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+
+.island__box {
+  height: 193px;
+  width: 194px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  @include mobile {
+    height: 193px;
+    width: 194px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    height: 199px;
+    width: 200.03px;
+  }
+  @include desktop {
+    height: 298.5px;
+    width: 300.05px;
+  }
+
+  &--description {
+    width: 90%;
+    padding-left: 10px;
+    color: $color_grey_5;
+    margin: 12px;
+    background: $background-color;
+    backdrop-filter: $backgroud-blur;
+    border-radius: 9.27979px;
+
+    &-name {
+      font-family: "Roboto Slab", serif;
+      font-weight: bold;
+
+      @include mobile {
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+      }
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+      }
+      @include desktop {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+      }
+    }
+
+    &-location {
+      font-family: "Roboto", sans-serif;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 2px;
+      margin-bottom: 6px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+      }
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+      }
+      @include desktop {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+
+  &--image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include mobile {
+      height: 193px;
+      width: 194px;
+    }
+    @include tablet {
+      height: 199px;
+      width: 200.03px;
+    }
+    @include desktop {
+      height: 298.5px;
+      width: 300.05px;
+    }
+  }
+}
+
+
+.location {
+  margin-right: 5px;
+  margin-left: -5px;
+  margin-top: -2px;
+  @include mobile {
+    height: 9px;
+    width: 7px;
+  }
+  @include tablet {
+    height: 9px;
+    width: 7px;
+  }
+  @include desktop {
+    height: 14px;
+    width: 11px;
+  }
+}
