@@ -3,5 +3,6 @@
   "logo-alt": "One Piece Logo",
   "footer-logo__src": "../../images/logos/placeholder.png",
   "footer-logo__alt": "One Piece Skull",
-  "character-src": "../../images/characters/ace.svg"
+  "character-src": "../../images/characters/ace.svg",
+  "hamb-menu": "../../images/logos/hamb-menu-icon.png"
 }
